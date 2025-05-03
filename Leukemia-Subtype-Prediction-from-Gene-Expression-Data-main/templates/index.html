@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leukemia Subtype Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="main-wrapper">
+    <header class="app-header">
+      <h1>Leukemia Subtype <span>Predictor</span></h1>
+      <p>Predict the subtype of leukemia using gene expression data with advanced ML models.</p>
+    </header>
+
+    <div class="chat-wrapper">
+      <div class="chat-box" id="chatBox">
+        <!-- Messages appear here -->
+      </div>
+
+      <div class="input-wrapper">
+        <input type="text" id="geneInput" placeholder="Enter gene expression values..." />
+        <button onclick="sendData()">Predict</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
